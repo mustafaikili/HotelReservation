@@ -13,7 +13,8 @@ namespace HotelReservation.Core.DataAccess.EntityFramework
         where TEntity : class,IEntity, new() //Class türünde olsun fakat bu class'lar IEntity'i misas alsın ve new edilmemiş olsun
         where TContext : DbContext, new()
     {
-
+        //TContext context = NewContext<TContext>.Context; // IOC kullandığımız zaman buna gerek kalmayacak şuanda Dependency 
+                                                        //  prensibini BLL ne DAL new ettiğimiz için ihlal ediyoruz 
         public void Add(TEntity entity)
         {
             using (TContext context = new TContext())
