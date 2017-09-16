@@ -10,16 +10,18 @@ using System.Threading.Tasks;
 
 namespace HotelReservation.Model.Mapping.EntityFramework
 {
-    public class CustomersMap : EntityTypeConfiguration<Customers>
+    public class UsersMap : EntityTypeConfiguration<Users>
     {
-        public CustomersMap()
+        public UsersMap()
         {
             //Primary KEY
-            HasKey(x => x.CustomerID);
-            
+            HasKey(x => x.UserID);
+
             //Property
-            Property(x => x.CivilizationNumber).HasColumnName("nvarchar").HasMaxLength(11).HasColumnAnnotation(IndexAnnotation.AnnotationName,
-                new IndexAnnotation(new IndexAttribute("CivilizationNumber_Unique") { IsUnique = true })).IsRequired();
+            Property(x => x.CivilizationNumber).HasColumnType("nvarchar").HasMaxLength(11).HasColumnAnnotation(IndexAnnotation.AnnotationName,
+                   new IndexAnnotation(new IndexAttribute("CivilizationNumber_Unique") { IsUnique = true })).IsRequired();
+            Property(x => x.UserName).HasColumnType("nvarchar").HasMaxLength(50).HasColumnAnnotation(IndexAnnotation.AnnotationName,
+                new IndexAnnotation(new IndexAttribute("UserName_Unique") { IsUnique = true })).IsRequired();
             Property(x => x.FirstName).HasMaxLength(50).IsRequired();
             Property(x => x.LastName).HasMaxLength(50).IsRequired();
             Property(x => x.Email).HasMaxLength(50).IsOptional();
@@ -28,9 +30,8 @@ namespace HotelReservation.Model.Mapping.EntityFramework
             Property(x => x.CreatedBy).IsOptional();
             Property(x => x.CreatedDate).HasColumnType("datetime2").HasPrecision(0).IsOptional();
             Property(x => x.LastModifiedBy).IsOptional();
-            Property(x => x.LastModifiedDate).HasColumnType("datetime2").HasPrecision(0).IsOptional();
+            Property(x => x.LastModifiedDate).HasColumnType("datetime2").HasPrecision(0).HasPrecision(0).IsOptional();
             Property(x => x.IsActive).IsOptional();
-
         }
     }
 }

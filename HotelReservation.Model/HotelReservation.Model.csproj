@@ -47,7 +47,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Customers.cs" />
+    <Compile Include="Entities\Passwords.cs" />
+    <Compile Include="Entities\Payments.cs" />
+    <Compile Include="Entities\PaymentTypes.cs" />
+    <Compile Include="Entities\PriceRatios.cs" />
+    <Compile Include="Entities\ResCusRooms.cs" />
+    <Compile Include="Entities\Reservations.cs" />
+    <Compile Include="Entities\ReservationTypes.cs" />
+    <Compile Include="Entities\RoomImages.cs" />
+    <Compile Include="Entities\Rooms.cs" />
+    <Compile Include="Entities\RoomTypes.cs" />
+    <Compile Include="Entities\Users.cs" />
     <Compile Include="Mapping\EntityFramework\CustomersMap.cs" />
+    <Compile Include="Mapping\EntityFramework\PasswordsMap.cs" />
+    <Compile Include="Mapping\EntityFramework\PaymentsMap.cs" />
+    <Compile Include="Mapping\EntityFramework\PaymentTypesMap.cs" />
+    <Compile Include="Mapping\EntityFramework\PriceRatiosMap.cs" />
+    <Compile Include="Mapping\EntityFramework\ResCusRoomsMap.cs" />
+    <Compile Include="Mapping\EntityFramework\ReservationsMap.cs" />
+    <Compile Include="Mapping\EntityFramework\ReservationTypesMap.cs" />
+    <Compile Include="Mapping\EntityFramework\RoomImagesMap.cs" />
+    <Compile Include="Mapping\EntityFramework\RoomsMap.cs" />
+    <Compile Include="Mapping\EntityFramework\RoomTypesMap.cs" />
+    <Compile Include="Mapping\EntityFramework\UsersMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

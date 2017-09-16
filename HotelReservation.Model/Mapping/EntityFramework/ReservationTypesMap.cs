@@ -10,26 +10,25 @@ using System.Threading.Tasks;
 
 namespace HotelReservation.Model.Mapping.EntityFramework
 {
-    public class CustomersMap : EntityTypeConfiguration<Customers>
+    public class ReservationTypesMap : EntityTypeConfiguration<ReservationTypes>
     {
-        public CustomersMap()
+        public ReservationTypesMap()
         {
             //Primary KEY
-            HasKey(x => x.CustomerID);
-            
+            HasKey(x => x.ReservationTypeID);
+
             //Property
-            Property(x => x.CivilizationNumber).HasColumnName("nvarchar").HasMaxLength(11).HasColumnAnnotation(IndexAnnotation.AnnotationName,
-                new IndexAnnotation(new IndexAttribute("CivilizationNumber_Unique") { IsUnique = true })).IsRequired();
-            Property(x => x.FirstName).HasMaxLength(50).IsRequired();
-            Property(x => x.LastName).HasMaxLength(50).IsRequired();
-            Property(x => x.Email).HasMaxLength(50).IsOptional();
-            Property(x => x.Telephone).HasMaxLength(50).IsOptional();
+            Property(x => x.ReservationTypeName).HasColumnType("nvarchar").HasMaxLength(50).HasColumnAnnotation(IndexAnnotation.AnnotationName, 
+                new IndexAnnotation(new IndexAttribute("ReservatonTypeName_Unique") { IsUnique = true })).IsRequired();
+            Property(x => x.ServicePrice).HasColumnType("money").IsRequired();
+            Property(x => x.Description).HasMaxLength(500).IsOptional();
 
             Property(x => x.CreatedBy).IsOptional();
             Property(x => x.CreatedDate).HasColumnType("datetime2").HasPrecision(0).IsOptional();
             Property(x => x.LastModifiedBy).IsOptional();
             Property(x => x.LastModifiedDate).HasColumnType("datetime2").HasPrecision(0).IsOptional();
             Property(x => x.IsActive).IsOptional();
+
 
         }
     }

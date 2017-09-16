@@ -17,6 +17,7 @@ namespace HotelReservation.Model.Entities
         public DateTime EndDate { get; set; }
         public byte PersonCount { get; set; }
 
+        public Guid? CreatedBy { get; set; }
         public DateTime? CreatedDate { get; set; }
         public Guid? LastModifiedBy { get; set; }
         public DateTime? LastModifiedDate { get; set; }

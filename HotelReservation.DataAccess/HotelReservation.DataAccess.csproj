@@ -57,6 +57,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HotelReservation.Model\HotelReservation.Model.csproj">
+      <Project>{92c447b5-1a8e-4fb9-83da-dd0866dc2399}</Project>
+      <Name>HotelReservation.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

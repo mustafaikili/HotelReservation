@@ -10,27 +10,22 @@ using System.Threading.Tasks;
 
 namespace HotelReservation.Model.Mapping.EntityFramework
 {
-    public class CustomersMap : EntityTypeConfiguration<Customers>
+    public class PriceRatiosMap : EntityTypeConfiguration<PriceRatios>
     {
-        public CustomersMap()
+        public PriceRatiosMap()
         {
             //Primary KEY
-            HasKey(x => x.CustomerID);
-            
+            HasKey(x=>x.PriceRatioID);
+
             //Property
-            Property(x => x.CivilizationNumber).HasColumnName("nvarchar").HasMaxLength(11).HasColumnAnnotation(IndexAnnotation.AnnotationName,
-                new IndexAnnotation(new IndexAttribute("CivilizationNumber_Unique") { IsUnique = true })).IsRequired();
-            Property(x => x.FirstName).HasMaxLength(50).IsRequired();
-            Property(x => x.LastName).HasMaxLength(50).IsRequired();
-            Property(x => x.Email).HasMaxLength(50).IsOptional();
-            Property(x => x.Telephone).HasMaxLength(50).IsOptional();
+            Property(x => x.PriceRatioName).HasMaxLength(50).HasColumnAnnotation(IndexAnnotation.AnnotationName, new IndexAnnotation(new IndexAttribute("PriceRatioName_Unique") { IsUnique = true })).IsRequired();
+            Property(x => x.PriceRatio).IsRequired();
 
             Property(x => x.CreatedBy).IsOptional();
             Property(x => x.CreatedDate).HasColumnType("datetime2").HasPrecision(0).IsOptional();
             Property(x => x.LastModifiedBy).IsOptional();
             Property(x => x.LastModifiedDate).HasColumnType("datetime2").HasPrecision(0).IsOptional();
             Property(x => x.IsActive).IsOptional();
-
         }
     }
 }
