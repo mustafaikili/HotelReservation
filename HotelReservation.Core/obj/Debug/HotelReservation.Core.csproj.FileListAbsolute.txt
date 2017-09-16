@@ -1,0 +1,10 @@
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\bin\Debug\HotelReservation.Core.dll.config
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\bin\Debug\HotelReservation.Core.dll
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\bin\Debug\HotelReservation.Core.pdb
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\bin\Debug\EntityFramework.dll
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\bin\Debug\EntityFramework.xml
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\obj\Debug\HotelReservation.Core.csprojResolveAssemblyReference.cache
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\obj\Debug\HotelReservation.Core.dll
+C:\Users\ikili\Desktop\GitHub\HotelReservation\HotelReservation.Core\obj\Debug\HotelReservation.Core.pdb

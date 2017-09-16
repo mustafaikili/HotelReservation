@@ -21,5 +21,8 @@ namespace HotelReservation.Model.Entities
         public Guid? LastModifiedBy { get; set; }
         public DateTime? LastModifiedDate { get; set; }
         public bool? IsActive { get; set; }
+
+        //Navigation Property
+        public ICollection<ResCusRooms> ResCusRoom { get; set; } 
     }
 }
