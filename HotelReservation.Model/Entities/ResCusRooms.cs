@@ -14,8 +14,8 @@ namespace HotelReservation.Model.Entities
         public int RoomNumber { get; set; }
 
         //Navigation Properties
-        public Reservations Reservation { get; set; }
-        public Customers Customer { get; set; }
-        public Rooms Room { get; set; }
+        public virtual Reservations Reservation { get; set; }
+        public virtual Customers Customer { get; set; }
+        public virtual Rooms Room { get; set; }
     }
 }

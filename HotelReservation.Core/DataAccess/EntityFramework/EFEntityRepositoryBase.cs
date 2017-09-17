@@ -13,52 +13,37 @@ namespace HotelReservation.Core.DataAccess.EntityFramework
         where TEntity : class,IEntity, new() //Class türünde olsun fakat bu class'lar IEntity'i misas alsın ve new edilmemiş olsun
         where TContext : DbContext, new()
     {
-        //TContext context = NewContext<TContext>.Context; // IOC kullandığımız zaman buna gerek kalmayacak şuanda Dependency 
+        TContext context = NewContext<TContext>.Context; // IOC kullandığımız zaman buna gerek kalmayacak şuanda Dependency 
                                                         //  prensibini BLL ne DAL new ettiğimiz için ihlal ediyoruz 
         public void Add(TEntity entity)
         {
-            using (TContext context = new TContext())
-            {
                 var addEntity = context.Entry(entity);
                 addEntity.State = EntityState.Added;
                 context.SaveChanges();
-            }
         }
 
         public void Delete(TEntity entity)
         {
-            using (TContext context = new TContext())
-            {
                 var deleteEntity = context.Entry(entity);
                 deleteEntity.State = EntityState.Deleted;
                 context.SaveChanges();
-            }
         }
 
         public void Update(TEntity entity)
         {
-            using (TContext context = new TContext())
-            {
                 var updateEntity = context.Entry(entity);
                 updateEntity.State = EntityState.Modified;
-            }
         }
 
         public TEntity Get(Expression<Func<TEntity, bool>> filter = null)
         {
-            using (TContext context = new TContext())
-            {
                 var getEntity = context.Set<TEntity>().Where(filter).FirstOrDefault();
                 return getEntity;
-            }
         }
 
         public ICollection<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
-            using (TContext context = new TContext())
-            {
                 return filter == null ? context.Set<TEntity>().ToList() : context.Set<TEntity>().Where(filter).ToList();
-            }
         }
     }
 }

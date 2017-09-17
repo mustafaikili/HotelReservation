@@ -9,14 +9,14 @@ namespace HotelReservation.Core.DataAccess.EntityFramework
 {
     public static class NewContext<TContext> where TContext : DbContext,new()
     {
-        private static TContext context;
+        private static TContext _context;
         public static TContext Context
         {
             get
             {
-                if (context == null)
-                    context= new TContext();
-                return Context;
+                if (_context == null)
+                    _context= new TContext();
+                return _context;
             }
         }
     }

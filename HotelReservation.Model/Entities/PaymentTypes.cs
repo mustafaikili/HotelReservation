@@ -19,6 +19,6 @@ namespace HotelReservation.Model.Entities
         public bool? IsActive { get; set; }
 
         //Navigation Properties
-        public ICollection<Payments> Payment { get; set; }
+        public virtual ICollection<Payments> Payment { get; set; }
     }
 }

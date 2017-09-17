@@ -20,6 +20,6 @@ namespace HotelReservation.Model.Entities
         public bool? IsActive { get; set; }
 
         //Navigation Properties
-        public Rooms Room { get; set; }
+        public virtual Rooms Room { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace HotelReservation.Model.Entities
         public bool? IsActive { get; set; }
 
         //Navigation Properties
-        public Reservations Reservation { get; set; }
-        public PaymentTypes PaymentType { get; set; }
+        public virtual Reservations Reservation { get; set; }
+        public virtual PaymentTypes PaymentType { get; set; }
     }
 }

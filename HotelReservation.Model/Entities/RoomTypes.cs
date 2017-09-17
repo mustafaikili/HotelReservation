@@ -21,6 +21,6 @@ namespace HotelReservation.Model.Entities
         public bool? IsActive { get; set; }
 
         //Navigation Properties
-        public ICollection<Rooms> Room { get; set; }
+        public virtual ICollection<Rooms> Room { get; set; }
     }
 }
