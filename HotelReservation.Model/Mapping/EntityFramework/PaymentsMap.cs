@@ -26,7 +26,7 @@ namespace HotelReservation.Model.Mapping.EntityFramework
             Property(x => x.IsActive).IsOptional();
 
             //Foreign KEY
-            HasRequired(x => x.Reservation).WithMany(x => x.Payment).HasForeignKey(x=>x.ReservationID).WillCascadeOnDelete(true);
+            HasRequired(x => x.Reservation).WithMany().HasForeignKey(x=>x.ReservationID).WillCascadeOnDelete(true);
             HasRequired(x => x.PaymentType).WithMany(x => x.Payment).HasForeignKey(x => x.PaymentTypeID).WillCascadeOnDelete(true);
         }
     }

@@ -46,18 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\EntityFramework\ICustomerManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IPasswordManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IPaymentManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IPaymentTypeManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IPriceRatioManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IResCusRoomManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IReservationManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IReservationTypeManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IRoomImageManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IRoomManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IRoomTypeManagementDAL.cs" />
+    <Compile Include="Abstract\EntityFramework\IUserManagementDAL.cs" />
     <Compile Include="Concreate\EntityFramework\HotelReservationDBContext.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFCustomerManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFPasswordManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFPaymentManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFPaymentTypeManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFPriceRatioManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFResCusRoomManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFReservationManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFReservationTypeManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFRoomImageManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFRoomManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFRoomTypeManagementDAL.cs" />
+    <Compile Include="Concreate\EntityFramework\ManagementDAL\EFUserManagementDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstract\EntityFramework\" />
-    <Folder Include="Concreate\EntityFramework\ManagementDAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HotelReservation.Core\HotelReservation.Core.csproj">
+      <Project>{28ec1889-2b56-464d-b7a2-99984da8575d}</Project>
+      <Name>HotelReservation.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HotelReservation.Model\HotelReservation.Model.csproj">
       <Project>{92c447b5-1a8e-4fb9-83da-dd0866dc2399}</Project>
       <Name>HotelReservation.Model</Name>
